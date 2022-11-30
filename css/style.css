@@ -1,0 +1,175 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  width: 700px;
+  height: 450px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.container .calculator {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-right: 1px solid #616161;
+  background-color: #252525;
+  padding-right: 10px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  overflow: hidden;
+}
+
+.container .calculator .display {
+  width: 100%;
+  height: 125px;
+  color: white;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: right;
+}
+
+.container .calculator .display input {
+  width: 100%;
+  background-color: #252525;
+  font-weight: 300;
+  text-align: right;
+  font-size: 3.5rem;
+  height: 125px;
+  border: none;
+  color: white;
+}
+
+s .container .calculator .display input::-webkit-outer-spin-button, .container .calculator .display input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.container .calculator .buttons {
+  width: 100%;
+  height: calc(100% - 125px);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(100px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  background-color: #252525;
+}
+
+.container .calculator .buttons button {
+  cursor: pointer;
+  font-size: 1.2rem;
+  background-color: white;
+  border-radius: 10px;
+  background-color: #2d2d2d;
+  color: white;
+}
+
+.container .calculator .buttons button:hover, .container .calculator .buttons button:active {
+  background-color: #4f4f4f;
+}
+
+.container .calculator .buttons button.grey {
+  background-color: #343434;
+}
+
+.container .calculator .buttons button.grey:hover, .container .calculator .buttons button.grey:active {
+  background-color: #4f4f4f;
+}
+
+.container .calculator .buttons button.submit {
+  background-color: #fe6d40;
+  border: none;
+}
+
+.container .calculator .buttons button.submit:hover, .container .calculator .buttons button.submit:active {
+  background-color: #ff8059;
+}
+
+.container .history {
+  width: 100%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  overflow: auto;
+  background-color: #252525;
+  color: white;
+  padding-block: 2rem;
+}
+
+.container .history::-webkit-scrollbar {
+  display: none;
+}
+
+.container .history h3 {
+  margin-bottom: 2rem;
+}
+
+.container .history div {
+  padding: 1rem 2rem;
+  width: 100%;
+  text-align: right;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.container .history div p:first-of-type {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.container .history div p:last-of-type {
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+/*# sourceMappingURL=style.css.map */
