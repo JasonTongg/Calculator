@@ -58,7 +58,7 @@ Array.from(operasi).forEach((item) =>
 
 negasi.addEventListener('click', () => {
   input.value *= -1;
-  calcstring.innerHTML = `Negate(${input.value}) = `;
+  calcstring.innerHTML = `Negate(${input.value * -1}) = `;
   historyDiv[0].insertAdjacentHTML(
     'beforeend',
     `<div>
