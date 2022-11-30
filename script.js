@@ -7,7 +7,7 @@ let input = document.getElementById('input');
 let calcstring = document.getElementById('calc');
 let number = document.getElementsByClassName('number');
 let operasi = document.getElementsByClassName('operasi');
-let historyDiv = document.getElementsByClassName('history');
+let historyDiv = document.querySelector('.history h3');
 
 let history = {};
 
@@ -20,7 +20,7 @@ let displayHistory = () => {
           <p>${history.var1} ${history.operation} ${history.var2} =</p>
           <p>${history.result}</p>
         </div>`;
-  historyDiv[0].insertAdjacentHTML('beforeend', markup);
+  historyDiv.insertAdjacentHTML('afterend', markup);
 };
 
 let calculate = () => {
@@ -59,8 +59,8 @@ Array.from(operasi).forEach((item) =>
 negasi.addEventListener('click', () => {
   input.value *= -1;
   calcstring.innerHTML = `Negate(${input.value * -1}) = `;
-  historyDiv[0].insertAdjacentHTML(
-    'beforeend',
+  historyDiv.insertAdjacentHTML(
+    'afterend',
     `<div>
           <p>Negate(${input.value * -1}) = </p>
           <p>${input.value}</p>
@@ -70,8 +70,8 @@ negasi.addEventListener('click', () => {
 
 sqrt.addEventListener('click', () => {
   calcstring.innerHTML = `Sqrt(${input.value}) =`;
-  historyDiv[0].insertAdjacentHTML(
-    'beforeend',
+  historyDiv.insertAdjacentHTML(
+    'afterend',
     `<div>
           <p>Sqrt(${input.value}) = </p>
           <p>${Math.sqrt(input.value).toFixed(4)}</p>
