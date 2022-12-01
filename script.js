@@ -91,6 +91,10 @@ submit.addEventListener('click', () => {
   calcstring.innerHTML = `${var1} ${operation} ${var2} = `;
 });
 
+dot.addEventListener('click', () => {
+  input.value += '.';
+});
+
 window.addEventListener('keydown', (e) => {
   if (/^\d+$/.test(e.key) || e.key === '.') {
     if (input.value === '0') {
@@ -103,6 +107,7 @@ window.addEventListener('keydown', (e) => {
     }
     input.value += e.key;
   } else {
+    console.log(e.key);
     if (e.key !== 'Enter') {
       var1 = input.value;
       var2 = '';
